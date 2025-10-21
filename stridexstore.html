@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EliteWear — Premium Footwear & Accessories</title>
+  <style>
+    :root{
+      --bg:#0a0f18;
+      --card:#111827;
+      --accent:#00e5ff;
+      --accent2:#ff3366;
+      --muted:#9ca3af;
+      --white:#ffffff;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;}
+    body{margin:0;font-family:'Poppins',sans-serif;color:var(--white);background:linear-gradient(180deg,#05060b 0%,#0a0f18 100%);overflow-x:hidden}
+    header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:rgba(255,255,255,0.03);backdrop-filter:blur(10px);position:sticky;top:0;z-index:10}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px}
+    .logo img{width:40px;height:40px;border-radius:10px;display:block}
+    nav a{color:var(--muted);margin-left:20px;text-decoration:none;font-weight:500;transition:color .3s}
+    nav a:hover{color:var(--accent2)}
+    .hero{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:60px 40px;gap:40px}
+    .hero-text{max-width:600px}
+    .hero-text h1{font-size:50px;margin:0;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .hero-text p{color:var(--muted);font-size:18px;margin:20px 0 30px}
+    .btn{padding:12px 22px;border-radius:8px;font-weight:600;border:none;cursor:pointer;transition:0.3s}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#000;font-weight:700}
+    .btn-primary:hover{opacity:0.85}
+    .btn-outline{border:1px solid var(--accent);background:transparent;color:var(--accent)}
+    .btn-outline:hover{background:var(--accent);color:#000}
+    .hero img{max-width:480px;border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,0.6);animation:float 4s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    section{padding:60px 40px}
+    h2{text-align:center;font-size:36px;margin-bottom:40px;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+    .card{background:var(--card);border-radius:12px;overflow:hidden;transition:transform .3s, box-shadow .3s}
+    .card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,0.6)}
+    .card img{width:100%;height:280px;object-fit:cover;display:block}
+    .card-body{padding:16px}
+    .card-body h4{margin:0 0 8px}
+    .card-body p{color:var(--muted);font-size:14px;margin:0 0 10px}
+    .price{font-weight:700;color:var(--accent2)}
+    .sizes{margin:10px 0}
+    .sizes select{padding:8px;border-radius:6px;background:transparent;color:var(--white);border:1px solid var(--accent)}
+    .buy-btn{margin-top:10px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#000;padding:8px 16px;border:none;border-radius:6px;font-weight:600;cursor:pointer}
+    .buy-btn:hover{opacity:0.85}
+    .accessories{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+    .accessory{background:var(--card);border-radius:12px;padding:16px;text-align:center;transition:.3s}
+    .accessory:hover{transform:translateY(-5px)}
+    .accessory img{width:100px;height:100px;border-radius:50%;object-fit:cover;margin-bottom:10px}
+    form{max-width:600px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+    input,textarea{padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.08);background:transparent;color:var(--white)}
+    button{align-self:flex-end}
+    footer{padding:30px 40px;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.05)}
+    @media(max-width:700px){.hero-text h1{font-size:38px}.hero{padding:40px 20px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="elite wear.png" alt="EliteWear logo" />
+      EliteWear
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#shoes">Shoes</a>
+      <a href="#accessories">Accessories</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>Step Into Confidence</h1>
+      <p>EliteWear brings you premium-quality footwear and accessories that define comfort, luxury, and class.</p>
+      <button class="btn btn-primary" onclick="document.getElementById('shoes').scrollIntoView({behavior:'smooth'})">Shop Now</button>
+      <button class="btn btn-outline" onclick="document.getElementById('accessories').scrollIntoView({behavior:'smooth'})">Explore</button>
+    </div>
+    <img src="nike sneakers.jpg" alt="nike sneakers" />
+  </section>
+
+  <section id="shoes">
+    <h2>Featured Shoes</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="black jogers.jpg" alt="AirFlex Runner">
+        <div class="card-body">
+          <h4>AirFlex Runner</h4>
+          <p>Lightweight and breathable for daily performance.</p>
+          <div class="sizes"><label>Size: </label>
+            <select>
+              <option>32</option>
+              <option>34</option>
+              <option>36</option>
+              <option>38</option>
+              <option>40</option>
+            </select>
+          </div>
+          <div class="price">$129</div>
+          <button class="buy-btn" onclick="openPayment('AirFlex Runner',129)">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="white sneakers.jpg" alt="Urban StreetX">
+        <div class="card-body">
+          <h4>Urban StreetX</h4>
+          <p>Modern sneaker for ultimate comfort.</p>
+          <div class="sizes"><label>Size: </label>
+            <select>
+              <option>32</option>
+              <option>34</option>
+              <option>36</option>
+              <option>38</option>
+              <option>40</option>
+            </select>
+          </div>
+          <div class="price">$99</div>
+          <button class="buy-btn" onclick="openPayment('Urban StreetX',99)">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="leather boots.jpg" alt="Classic Leather">
+        <div class="card-body">
+          <h4>Classic Leather</h4>
+          <p>Timeless elegance for formal wear.</p>
+          <div class="sizes"><label>Size: </label>
+            <select>
+              <option>32</option>
+              <option>34</option>
+              <option>36</option>
+              <option>38</option>
+              <option>40</option>
+            </select>
+          </div>
+          <div class="price">$149</div>
+          <button class="buy-btn" onclick="openPayment('Classic Leather',149)">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="one-black-sneaker-shoe-isolated-white.jpg" alt="TrailBlazer Pro">
+        <div class="card-body">
+          <h4>TrailBlazer Pro</h4>
+          <p>Perfect for hiking and adventure.</p>
+          <div class="sizes"><label>Size: </label>
+            <select>
+              <option>32</option>
+              <option>34</option>
+              <option>36</option>
+              <option>38</option>
+              <option>40</option>
+            </select>
+          </div>
+          <div class="price">$139</div>
+          <button class="buy-btn" onclick="openPayment('TrailBlazer Pro',139)">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="accessories">
+    <h2>Accessories</h2>
+    <div class="accessories">
+      <div class="accessory">
+        <img src="leather belt image.jpeg" alt="Leather Belt">
+        <h4>Leather Belt</h4>
+        <p>Genuine leather style.</p>
+        <div class="sizes"><label>Size: </label>
+          <select>
+            <option>S</option><option>M</option><option>L</option><option>XL</option>
+          </select>
+        </div>
+        <div class="price">$49</div>
+        <button class="buy-btn" onclick="openPayment('Leather Belt',49)">Buy Now</button>
+      </div>
+
+      <div class="accessory">
+        <img src="socks image.jpeg" alt="Stylish Socks">
+        <h4>Stylish Socks</h4>
+        <p>Soft and colorful cotton socks.</p>
+        <div class="sizes"><label>Size: </label>
+          <select>
+            <option>S</option><option>M</option><option>L</option><option>XL</option>
+          </select>
+        </div>
+        <div class="price">$12</div>
+        <button class="buy-btn" onclick="openPayment('Stylish Socks',12)">Buy Now</button>
+      </div>
+
+      <div class="accessory">
+        <img src="shoe cleaner.jpeg" alt="Shoe Cleaner Kit">
+        <h4>Shoe Cleaner Kit</h4>
+        <p>Keep your shoes spotless.</p>
+        <div class="sizes"><label>Pack Size: </label>
+          <select>
+            <option>Small</option><option>Medium</option><option>Large</option>
+          </select>
+        </div>
+        <div class="price">$19</div>
+        <button class="buy-btn" onclick="openPayment('Shoe Cleaner Kit',19)">Buy Now</button>
+      </div>
+
+      <div class="accessory">
+        <img src="leather wallet.jpeg" alt="leather wallet">
+        <h4>Leather wallet</h4>
+        <p>original leather wallet.</p>
+        <div class="sizes"><label>Size: </label>
+          <select>
+            <option>S</option><option>M</option><option>L</option><option>XL</option>
+          </select>
+        </div>
+        <div class="price">$8</div>
+        <button class="buy-btn" onclick="openPayment('Laces Pack',8)">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="event.preventDefault();alert('Message sent successfully!')">
+      <input type="text" placeholder="EliteWear" required />
+      <input type="email" placeholder="EliteWear@gmail.com" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    © <span id="year"></span> EliteWear — Step Ahead in Style
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple fake payment modal flow (re-usable)
+    function openPayment(name, price){
+      // Build a simple prompt-based demo flow.
+      const sizeSelects = document.querySelectorAll('.sizes select');
+      let selectedSize = 'N/A';
+      // Try to find size inside the same card/button (best effort)
+      sizeSelects.forEach(s => {
+        const parent = s.closest('div.card, div.accessory');
+        if(parent && parent.querySelector('button.buy-btn') && parent.querySelector('h4').textContent === name){
+          selectedSize = s.value;
+        }
+      });
+      const qty = 1;
+      const proceed = confirm(`Buy: ${name}\\nPrice: $${price}\\nSize: ${selectedSize}\\n\\nProceed to payment (demo)?`);
+      if(!proceed) return;
+      const full = prompt('Enter full name (demo):');
+      if(!full){ alert('Payment cancelled'); return; }
+      const email = prompt('Enter email (demo):');
+      if(!email){ alert('Payment cancelled'); return; }
+      const card = prompt('Enter card number (demo):');
+      if(!card){ alert('Payment cancelled'); return; }
+      // simulate success
+      setTimeout(()=>{ alert('Payment simulated — order placed. Thank you!'); },700);
+    }
+  </script>
+</body>
+</html>
